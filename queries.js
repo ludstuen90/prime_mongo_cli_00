@@ -19,6 +19,8 @@ db.bios.find({ $and: [{"_id": {$gt:2}}, {"_id": {$lt:8}}]}).pretty();
 
 db.bios.find({ "awards.year": {$lt:2000}}).pretty();
 
+// 8. Find documents with birth dates, but no death dates.
+db.bios.find({ $and: [{"birth": {$exists:true}}, {"death": {$exists:false}}]}).pretty();
 
 
 db.bios.find().pretty();
