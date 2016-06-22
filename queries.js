@@ -1,5 +1,5 @@
 //1. Create a file, queries.js that will contain the queries that correctly address the criteria in the steps that follow.
-
+  //Completed!
 // 2. Find documents that have awards.
  db.bios.find({"awards": {$exists:true}}).pretty();
 
@@ -21,6 +21,3 @@ db.bios.find({ "awards.year": {$lt:2000}}).pretty();
 
 // 8. Find documents with birth dates, but no death dates.
 db.bios.find({ $and: [{"birth": {$exists:true}}, {"death": {$exists:false}}]}).pretty();
-
-
-db.bios.find().pretty();
